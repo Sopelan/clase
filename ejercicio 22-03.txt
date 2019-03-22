@@ -7,5 +7,5 @@ d) cuantos veces se ingreso el 0
 e) promedio de numeros positivos
 f) maximo y minimo (en que orden se ingreso)
 g) la suma de los negativos
-h) la diferencua entre negativos y positivos
+h) la diferencia entre negativos y positivos
 i) cuantos numeros estan entre -239 y 5

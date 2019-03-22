@@ -17,7 +17,13 @@ int main()
     printf("ingrese una palabra: ");
     scanf("%s", &palabra);
     printf("la palabra es: %s" ,palabra);*/
-
+    float variableA;
+    float variableB;
+    int resultado;
+    variableA = 3.14;
+    variableB = 5.5;
+    resultado = variableA < variableB;
+    printf("Resultado de la comparación: %d",resultado);
     system("pause");
     return 0;
     /*https://www.utnfravirtual.org.ar/*/

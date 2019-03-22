@@ -20,7 +20,7 @@ int main()
     printf("Marcos \t Sopelana\n");
     printf("su edad es: %d",edad);
     printf("\nsu altura es: %f",altura);*/
-     int contador;
+    int contador;
     int numero;
     int altura;
     float promedio;
