@@ -12,11 +12,13 @@ int main()
     fflush(stdin);
     //setbuf(stdin,NULL)
     scanf("%c", &letra);
-    printf("el numero es: %d\nla letra es: %c\n", numero , letra);*/
+    printf("el numero es: %d\nla letra es: %c\n", numero , letra);
     char palabra[10];
     printf("ingrese una palabra: ");
     scanf("%s", &palabra);
-    printf("la palabra es: %s" ,palabra);
+    printf("la palabra es: %s" ,palabra);*/
 
     system("pause");
+    return 0;
+    /*https://www.utnfravirtual.org.ar/*/
 }
