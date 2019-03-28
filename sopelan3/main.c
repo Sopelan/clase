@@ -1,10 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-int dividir(int numero);
-int esDistintoCero(int numero);
-int factorial(int numero);
-int cambiarvalor(int valor);
-int cambiarValorReferencia(int* valor);
+#include <bibloteca.h>
 int main()
 {
     /*int edad;
