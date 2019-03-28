@@ -3,7 +3,8 @@
 int dividir(int numero);
 int esDistintoCero(int numero);
 int factorial(int numero);
-
+int cambiarvalor(int valor);
+int cambiarValorReferencia(int* valor);
 int main()
 {
     /*int edad;
@@ -22,9 +23,14 @@ int main()
     printf("el dato es :%d",dato);
     dato=dividir(0);
     printf("el dato es :%d",dato);*/
-    int unfactorial;
+    /*int unfactorial;
     unfactorial=factorial(5);
-    printf("la factorial es : %d", unfactorial);
+    printf("la factorial es : %d", unfactorial);*/
+    int midato=333;
+    cambiarvalor(midato);
+    printf("mi dato es : %d",midato);
+    cambiarValorReferencia(&midato);
+    printf("mi dato es : %d",midato);
     return 0;
 }
 int dividir(int numero)
@@ -55,4 +61,25 @@ int factorial(int numero)
     }
     respuesta=numero*factorial(numero-1);
     return respuesta;
+}
+int cambiarvalor(int valor)
+{
+    valor=999;
+    return 1;
+}
+int cambiarValorReferencia(int* valor)
+{
+    printf("el valor es: %d",*valor);
+    *valor=999;
+    return 1;
+}
+float dividirporReferencia(int datouno, int datodos , float *respuesta)
+{
+    if(datouno!=0)
+    {
+        *respuesta=(float)datouno/datodos;
+        return 1;
+    }
+    return 0;
+
 }
