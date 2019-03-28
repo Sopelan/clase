@@ -34,6 +34,10 @@
 		<Unit filename="../sopelan 4.1">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="bibloteca.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="bibloteca.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
