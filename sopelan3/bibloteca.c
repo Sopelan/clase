@@ -34,7 +34,7 @@ int cambiarvalor(int valor)
 }
 int cambiarValorReferencia(int* valor)
 {
-    printf("el valor es: %d",*valor);
+    printf("el valor es: %d\n",*valor);
     *valor=999;
     return 1;
 }
