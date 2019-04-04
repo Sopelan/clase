@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 void mostrarVector(int datos[] , int tamanio);
-//void mostrarPalabra();
+void mostrarPalabra(char datos[][10] , int tamanio);
 void cargarVector(int datos[] , int tamanio);
 void ordenarVector(int datos[] , int tamanio);
 int main()
@@ -119,5 +119,13 @@ void cargarVector(int datos[] , int tamanio)
     for(i = 0 ; i < tamanio ; i++)
     {
        datos[i] = -1;
+    }
+}
+void mostrarPalabra(char datos[][10] , int tamanio)
+{
+    int i;
+    for(i = 0 ; i < tamanio ; i++)
+    {
+       printf("nombre :%s \n",datos[i]);
     }
 }
