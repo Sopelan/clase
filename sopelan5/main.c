@@ -36,7 +36,19 @@ int main()
     {
         printf("alumno: %s nota: %d\n",usuario[i],nota[i]);
     }
-
+    for(i = 0 ; i < 5 ; i++)
+    {
+        for(j = 0 ; j < 5 ; j++)
+        {
+            printf("%d => %d \n",nota[i],nota[j]);
+            if(nota[i] < nota[j])
+            {
+                int aux = nota[i];
+                nota[i] = nota[j];
+                nota[j] = aux;
+            }
+        }
+    }
     /*
     printf("Hello   %s  \n",usuario[1]);
     printf("Hello   %s  \n",usuario[0]);
