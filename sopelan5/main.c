@@ -1,13 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+void mostrarVector(int datos[] , int tamanio);
 int main()
 {
     char usuario[10][10] = {"jose","maria","jesus","ramiro", "luz"};
     int nota[10] ={8,5,2,10,3};
     int i;
     int j;
+    mostrarVector(nota,5);
    /* for(i = 0 ; i < 5 ; i++)
     {
         // usuario[i][0]=" ";
@@ -19,6 +20,7 @@ int main()
     {
     printf("ingrese usuario #%d :",i+1);
     scanf("%s",usuario[i]);
+    //gets(usuario[i]);
     printf("ingrese nota #%d :\n",i+1);
     scanf("%d",&nota[i]);
     }*/
@@ -32,10 +34,10 @@ int main()
 
     /*int tamanio = strlen(usuario[8]);
     printf("tamanio :%d  \n",tamanio);*/
-    for(i = 0 ; i < 5 ; i++)
+    /*for(i = 0 ; i < 5 ; i++)
     {
         printf("alumno: %s nota: %d\n",usuario[i],nota[i]);
-    }
+    }*/
     /*
     for(i = 0 ; i < 5 ; i++)
     {
@@ -60,7 +62,7 @@ for(i = 0 ; i < 5 ; i++)
         {
             int resultado;
             /*printf("%d => %d \n",nota[i],nota[j]);
-            //if(nota[i] < nota[j])
+
 
             resultado = strcmp("hola","hola");//0
             printf(" iguales :%d\n)",resultado);
@@ -75,7 +77,7 @@ for(i = 0 ; i < 5 ; i++)
             resultado = strcmp("b","a");//-1
             printf(" la b-a :%d\n)",resultado);1*/
             resultado = strcmp(usuario[i],usuario[j]);
-
+            //if(nota[i] < nota[j])
             if(resultado == -1)
             {
                 int aux = nota[i];
@@ -97,4 +99,12 @@ for(i = 0 ; i < 5 ; i++)
     printf("Hello   %s  \n",usuario[0]);
     */
     return 0;
+}
+void mostrarVector(int datos[] , int tamanio)
+{
+    int i;
+    for(i = 0 ; i < tamanio ; i++)
+    {
+        printf("nota: %d\n",datos[i]);
+    }
 }
