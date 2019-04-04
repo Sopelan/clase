@@ -2,12 +2,16 @@
 #include <stdlib.h>
 #include <string.h>
 void mostrarVector(int datos[] , int tamanio);
+void mostrarPalabra();
+void cargarVector(int datos[] , int tamanio);
 int main()
 {
     char usuario[10][10] = {"jose","maria","jesus","ramiro", "luz"};
     int nota[10] ={8,5,2,10,3};
     int i;
     int j;
+    mostrarVector(nota,5);
+    cargarVector(nota,5);
     mostrarVector(nota,5);
    /* for(i = 0 ; i < 5 ; i++)
     {
@@ -106,5 +110,13 @@ void mostrarVector(int datos[] , int tamanio)
     for(i = 0 ; i < tamanio ; i++)
     {
         printf("nota: %d\n",datos[i]);
+    }
+}
+void cargarVector(int datos[] , int tamanio)
+{
+    int i;
+    for(i = 0 ; i < tamanio ; i++)
+    {
+       datos[i] = -1;
     }
 }
