@@ -2,8 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 void mostrarVector(int datos[] , int tamanio);
-void mostrarPalabra();
+//void mostrarPalabra();
 void cargarVector(int datos[] , int tamanio);
+void ordenarVector(int datos[] , int tamanio);
 int main()
 {
     char usuario[10][10] = {"jose","maria","jesus","ramiro", "luz"};
