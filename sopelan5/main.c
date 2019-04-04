@@ -7,6 +7,7 @@ int main()
     char usuario[10][10] = {"jose","maria","jesus","ramiro", "luz"};
     int nota[10] ={8,5,2,10,3};
     int i;
+    int j;
    /* for(i = 0 ; i < 5 ; i++)
     {
         // usuario[i][0]=" ";
