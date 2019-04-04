@@ -36,9 +36,10 @@ int main()
     {
         printf("alumno: %s nota: %d\n",usuario[i],nota[i]);
     }
+    /*
     for(i = 0 ; i < 5 ; i++)
     {
-        for(j = 0 ; j < 5 ; j++)
+        for(j = 0 ; j < 4 ; j++)
         {
             printf("%d => %d \n",nota[i],nota[j]);
             if(nota[i] < nota[j])
@@ -46,8 +47,50 @@ int main()
                 int aux = nota[i];
                 nota[i] = nota[j];
                 nota[j] = aux;
+                char auxString[10];
+                strcpy(auxString  , usuario[i]);
+                strcpy(usuario[i] , usuario[j]);
+                strcpy(usuario[j] , auxString);
             }
         }
+    }*/
+for(i = 0 ; i < 5 ; i++)
+    {
+        for(j = 0 ; j < 4 ; j++)
+        {
+            int resultado;
+            /*printf("%d => %d \n",nota[i],nota[j]);
+            //if(nota[i] < nota[j])
+
+            resultado = strcmp("hola","hola");//0
+            printf(" iguales :%d\n)",resultado);
+            resultado = strcmp("Hola","hola");//-1
+            printf(" primera :%d\n)",resultado);
+            resultado = strcmp("hola","Hola");//1
+            printf(" segunda :%d\n)",resultado);
+            resultado = strcmp("A","a");//-1
+            printf(" la A :%d\n)",resultado);
+            resultado = strcmp("a","b");//-1
+            printf(" la a-b :%d\n)",resultado);
+            resultado = strcmp("b","a");//-1
+            printf(" la b-a :%d\n)",resultado);1*/
+            resultado = strcmp(usuario[i],usuario[j]);
+
+            if(resultado == -1)
+            {
+                int aux = nota[i];
+                nota[i] = nota[j];
+                nota[j] = aux;
+                char auxString[10];
+                strcpy(auxString  , usuario[i]);
+                strcpy(usuario[i] , usuario[j]);
+                strcpy(usuario[j] , auxString);
+            }
+        }
+    }
+      for(i = 0 ; i < 5 ; i++)
+    {
+        printf("alumno: %s nota: %d\n",usuario[i],nota[i]);
     }
     /*
     printf("Hello   %s  \n",usuario[1]);
