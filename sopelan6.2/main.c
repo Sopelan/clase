@@ -3,13 +3,17 @@
 #include <string.h>
 int main()
 {
-    char nombre [6];//= "juan"
+    char nombre [6] = "juan";
     char otroNombre [50] = "jose Perez" ;
     int largo;
     int compara;
-    strcpy(nombre ,otroNombre);
+    //strlwr(otroNombre);
+    strcat(nombre , otroNombre);
+    //strupr(otroNombre);
+    //strcpy(nombre ,otroNombre);
+    //strncpy(nombre , otroNombre , 5);
     //nombre = "juan";
-    printf("ingrese su nombre: \n");
+    //printf("ingrese su nombre: \n");
     //scanf("%[^\n]",nombre);
     //fgets(nombre , 50 , stdin)
     //scanf("%s",nombre);

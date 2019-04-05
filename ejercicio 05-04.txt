@@ -1,0 +1,4 @@
+nombre = German esequiel
+apellido= scarafilo
+apellidonombre Serafilo , German Esequiel
+primera letra mayuscula
