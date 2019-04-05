@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1554469479 source:c:\users\alumno\desktop\utn\clase\sopelan6\main.c
+	<stdio.h>
+	<stdlib.h>
+	"BIBLO.h"
+
+1554468921 c:\users\alumno\desktop\utn\clase\sopelan6\biblo.h
+	"BIBLO.c"
+
+1554469479 c:\users\alumno\desktop\utn\clase\sopelan6\biblo.c
+
