@@ -3,19 +3,24 @@
 #include <string.h>
 int main()
 {
-    char nombre [50] ;
+    char nombre [6];//= "juan"
+    char otroNombre [50] = "jose Perez" ;
     int largo;
     int compara;
+    strcpy(nombre ,otroNombre);
+    //nombre = "juan";
     printf("ingrese su nombre: \n");
     //scanf("%[^\n]",nombre);
     //fgets(nombre , 50 , stdin)
-    gets(nombre);
+    //scanf("%s",nombre);
+    //gets(nombre);
     //largo = strlen(nombre);
     printf("Su nombre es : %s\n", nombre);
     //printf("%d" , largo);
     /*if(nombre == "pepe")
         printf("usted se llama pepe");*/
-    compara = strcmp(nombre , "pepe");
-    printf("%d" , compara);
+    //compara = strcmp(nombre , "pepe");
+    //compara = stricmp(nombre , "pepe");
+    //printf("%d" , compara);
     return 0;
 }
