@@ -3,6 +3,7 @@
 #include <string.h>
 #define CANTIDAD 4
 void getString(char mensaje[], char input[] );
+int soloLetras(char str[]);
 int main()
 {
      char nombre[CANTIDAD][50] = {"maria" , "mariano" , "flor" , "Martin"};
