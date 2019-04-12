@@ -2,11 +2,13 @@
 #include <stdlib.h>
 struct eAlumno
 {
-    char nombre[]
+    char nombre[50];
+    char apellido[50];
+    int edad;
+    int nota;
 }
 
 int main()
 {
-    printf("Hello world!\n");
     return 0;
 }
