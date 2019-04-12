@@ -9,12 +9,14 @@ void mostrarAlumnos(char[][50] , char[][50] , int[] , int[] , int);
 void ordenarAlumnos(char[][50] , char[][50] , int[] , int[] , int);
 int main()
 {
-     char nombre[CANTIDAD][50] = {"maria" , "mariano" , "flor" , "Martin"};
+     char nombre[CANTIDAD][50] = {"aurora" , "mariano" , "flor" , "dolores"};
      char apellido[CANTIDAD][50] = {"dorrego" , "sopelana" , "Tendo" , "saotome" };
      int edad[CANTIDAD] = { 39 , 39 , 17 , 16};
      int nota[CANTIDAD] = { 9 , 8 , 10 , 5};
      int i;
      int j;
+     //char mail[][30];
+    mostrarAlumnos(nombre , apellido , edad , nota , CANTIDAD);
     ordenarAlumnos(nombre , apellido , edad , nota , CANTIDAD);
     mostrarAlumnos(nombre , apellido , edad , nota , CANTIDAD);
     char unNombre[50];
@@ -49,27 +51,29 @@ int soloLetras(char str[])
 }
 void ordenarAlumnos(char nombre [][50] , char apellido[][50] , int edad[] , int nota[] , int tamano)
 {
-    char auxCadena[50];
+    char auxCadena[50] ;
+    char auxCadena2[50];
     int auxEnteros;
+    int auxEnteros2;
     int i;
     int j;
-    for(i = 0 ; i < tamano - 1 ; i++)
+    for(i = 0 ; i < tamano - 1  ; i++)
     {
-        for(j = 1 ; j < tamano ; j++)
+        for(j = i + 1 ; j < tamano ; j++)
         {
-            if(strcmp(nombre[i],nombre[j])>1)
+            if(strcmp(nombre[i],nombre[j])>0)
                 strcpy(auxCadena , nombre[i]);
                 strcpy(nombre[i] , nombre[j]);
                 strcpy(nombre[j] , auxCadena);
-                strcpy(auxCadena , apellido[i]);
+                strcpy(auxCadena2 , apellido[i]);
                 strcpy(apellido[i] , apellido[j]);
-                strcpy(apellido[j] , auxCadena);
+                strcpy(apellido[j] , auxCadena2);
                 auxEnteros = edad[i];
                 edad[i] = edad[j];
                 edad[j] = auxEnteros;
-                auxEnteros = nota[i];
+                auxEnteros2 = nota[i];
                 nota[i] = nota[j];
-                nota[j] = auxEnteros;
+                nota[j] = auxEnteros2;
         }
     }
 }
