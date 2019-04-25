@@ -14,7 +14,7 @@ eProducto pedirProducto()
     fflush(stdin);
     gets(retorno.codigoDeBarra);
     printf("pedir precio\n");
-    scanf("%f",&retorno.precio);
+    scanf("%s",&retorno.precio);
     return retorno;
 }
 void mostraProducto(eProducto mostrar)
@@ -23,7 +23,7 @@ void mostraProducto(eProducto mostrar)
     printf("2. %s\n",&mostrar.provedor);
     printf("3. %s\n",&mostrar.codigoDeBarra);
     printf("4. %s\n",&mostrar.fechaDeVecimiento);
-    printf("5. %f\n",&mostrar.precio);
+    printf("5. %d\n",atoi(mostrar.precio));
 }
 void cargarArray(int tam ,eProducto listado[])
 {
