@@ -1,8 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include "sopelan.h"
+#define TAM 5
 int main()
 {
-    printf("Hello world!\n");
+    eProducto producto;
+    producto = pedirProducto();
+    mostraProducto(producto);
+
+
     return 0;
 }
