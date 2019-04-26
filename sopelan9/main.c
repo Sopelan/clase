@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "sopelan.h"
-#define TAM 2
+#define TAM 5
 int main()
 {
     eProducto producto[TAM];
