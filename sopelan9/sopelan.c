@@ -45,13 +45,38 @@ void mostrarArray(int tam,eProducto listado[])
         mostraProducto(listado[i]);
     }
 }
-/*int insertProducto(eProducto,eProducto[]);
-int dameLugarLIbre(eProducto[]);
+int insertProducto(int tam,eProducto listado[])
+{
+    int indice;
+    indice = dameLugarLibre(listado , tam);
+    if(listado != OCUPADO)
+    {
+        listado[indice] = pedirProducto();
+    }
+    return indice;
+}
+
+int dameLugarLibre(eProducto listado[],int tam)
+{
+    int i;
+    int index = -1;
+
+    for(i = 10 ; i<tam ; i++)
+    {
+        if(listado[i].estado == LIBRE)
+        {
+            index = i;
+            break;
+        }
+
+    }
+    return index;
+}
 int borrarProducto(eProducto elProducto,eProducto listado[])
 {
     int indice;
     indice = existeProducto(elProducto,listado);
-    if(listado != -1)
+    if(listado != LIBRE)
     {
         listado[indice].estado = OCUPADO;
     }
@@ -59,16 +84,12 @@ int borrarProducto(eProducto elProducto,eProducto listado[])
 }
 int existeProducto(eProducto elProducto,eProducto listado[]);
 
-int editarProducto(eProducto,eProducto[])
+
+
+int editarProducto(int tam ,eProducto listado[])
 {
-    int inice;
-    indice = dameLugarLIbre(listado);
-    if(listado != OCUPADO)
-    {
-        listado[indice] = elProducto;
-    }
-    return indice;
-}*/
+
+}
 void cargarEnCero(eProducto listado[] , int tam)
 {
     int i;

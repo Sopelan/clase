@@ -15,11 +15,11 @@ void mostraProducto(eProducto);
 void cargarArray(int tam ,eProducto listado[]);
 void mostrarArray(int tam,eProducto listado[]);
 void construirArray(int tam , eProducto listado[]);
-int insertProducto(eProducto,eProducto[]);
-int dameLugarLIbre(eProducto[]);
+int insertProducto(int tam,eProducto[]);
+int dameLugarLibre(eProducto[],int tam);
 int existeProducto(eProducto,eProducto[]);
 int borrarProducto(eProducto,eProducto[]);
-int editarProducto(eProducto,eProducto[]);
+int editarProducto(int ,eProducto[]);
 void cargarEnCero(eProducto[] , int);
 
 
