@@ -1,7 +1,7 @@
 #ifndef SOPELAN_H_INCLUDED
 #define SOPELAN_H_INCLUDED
-#define LIBRE 1
-#define OCUPADO 0
+#define LIBRE 0
+#define OCUPADO -1
 typedef struct{
 char codigoDeBarra[13];
 char nombre[50];
@@ -18,7 +18,7 @@ void construirArray(int tam , eProducto listado[]);
 int insertProducto(int tam,eProducto[]);
 int dameLugarLibre(eProducto[],int tam);
 int existeProducto(eProducto,eProducto[]);
-int borrarProducto(eProducto,eProducto[]);
+int borrarProducto(int,eProducto[]);
 int editarProducto(int ,eProducto[]);
 void cargarEnCero(eProducto[] , int);
 

@@ -1,11 +1,11 @@
 # depslib dependency file v1.0
-1556295705 source:c:\users\alumno\desktop\nueva carpeta\tp\sopelan9\main.c
+1556302481 source:c:\users\alumno\desktop\nueva carpeta\tp\sopelan9\main.c
 	<stdio.h>
 	<stdlib.h>
 	"sopelan.h"
 
-1556295623 c:\users\alumno\desktop\nueva carpeta\tp\sopelan9\sopelan.h
+1556302049 c:\users\alumno\desktop\nueva carpeta\tp\sopelan9\sopelan.h
 	"sopelan.c"
 
-1556296180 c:\users\alumno\desktop\nueva carpeta\tp\sopelan9\sopelan.c
+1556302418 c:\users\alumno\desktop\nueva carpeta\tp\sopelan9\sopelan.c
 

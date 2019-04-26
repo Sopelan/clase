@@ -26,7 +26,7 @@ void mostraProducto(eProducto mostrar)
     printf("3. %s\n",&mostrar.codigoDeBarra);
     printf("4. %s\n",&mostrar.fechaDeVecimiento);
     printf("5. %d\n",atoi(mostrar.precio));
-    printf("6. %d\n",atoi(mostrar.estado));
+    printf("6. %d\n",mostrar.estado);
 }
 void cargarArray(int tam ,eProducto listado[])
 {
@@ -49,19 +49,18 @@ int insertProducto(int tam,eProducto listado[])
 {
     int indice;
     indice = dameLugarLibre(listado , tam);
-    if(listado != OCUPADO)
+    if(indice != OCUPADO)
     {
         listado[indice] = pedirProducto();
     }
-    return indice;
 }
 
 int dameLugarLibre(eProducto listado[],int tam)
 {
     int i;
-    int index = -1;
+    int index = OCUPADO;
 
-    for(i = 10 ; i<tam ; i++)
+    for(i = 0 ; i<tam ; i++)
     {
         if(listado[i].estado == LIBRE)
         {
@@ -72,23 +71,55 @@ int dameLugarLibre(eProducto listado[],int tam)
     }
     return index;
 }
-int borrarProducto(eProducto elProducto,eProducto listado[])
+int borrarProducto(int tam,eProducto listado[])
 {
-    int indice;
-    indice = existeProducto(elProducto,listado);
-    if(listado != LIBRE)
+    int i;
+    char codigo[50];
+    int loEncontro = 0;
+    printf("ingrese el cofigo de barra: ");
+    fflush(stdin);
+    gets(codigo);
+    for(i = 0; i < tam ; i++)
     {
-        listado[indice].estado = OCUPADO;
+        if(strcmp(listado[i].codigoDeBarra , codigo) == 0)
+        {
+            listado[i].estado = LIBRE;
+            loEncontro = 1;
+        }
+
     }
-    return indice;
+    if(loEncontro != 1)
+        {
+            printf("codigo inexistente");
+        }
 }
-int existeProducto(eProducto elProducto,eProducto listado[]);
+
 
 
 
 int editarProducto(int tam ,eProducto listado[])
 {
+    int i;
+    char codigo[50];
+    int loEncontro = 0;
+    printf("ingrese el cofigo de barra: ");
+    fflush(stdin);
+    gets(codigo);
+    for(i = 0; i < tam ; i++)
+    {
+        if(strcmp(listado[i].codigoDeBarra , codigo) == 0)
+        {
+            printf("pedir precio nuevo\n");
+            fflush(stdin);
+            gets(listado[i].precio);
+            loEncontro = 1;
+        }
 
+    }
+    if(loEncontro != 1)
+        {
+            printf("codigo inexistente");
+        }
 }
 void cargarEnCero(eProducto listado[] , int tam)
 {
@@ -117,3 +148,13 @@ void inicializarProductos(eProducto lista[], int tam)
         lista[i].estado = OCUPADO;
     }
 }
+void construirArray(int tam , eProducto listado[])
+{
+    int i;
+    for(i = 0; i < tam ;i++)
+    {
+        listado[i].estado == LIBRE;
+    }
+}
+
+
