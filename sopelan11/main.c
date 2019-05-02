@@ -10,7 +10,7 @@ int main()
     eProvedor provedor[10];
     inicializarProductos(producto);
     inicializarProvedor(provedor);
-    mostrarTodo(provedor,producto);
+    mostrarTodo( producto,  10 ,  provedor, 3);
     //producto = pedirProducto();
     //mostraProducto(producto);
     //inicializarProductos(producto , TAM);

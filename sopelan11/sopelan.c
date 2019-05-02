@@ -22,11 +22,19 @@ eProducto pedirProducto()
 void mostraProducto(eProducto mostrar)
 {
     printf("1. %s\n",&mostrar.nombre);
- //   printf("2. %s\n",&mostrar.provedor);
+    printf("2. %d\n",&mostrar.iDproveedor);
     printf("3. %s\n",&mostrar.codigoDeBarra);
     printf("4. %s\n",&mostrar.fechaDeVecimiento);
     printf("5. %d\n",atoi(mostrar.precio));
     printf("6. %d\n",mostrar.estado);
+}
+void mostraProvedor(eProvedor mostrar)
+{
+    printf("7. %s\n",&mostrar.id);
+    printf("8. %d\n",&mostrar.descripcion);
+    printf("9. %d\n",&mostrar.localidad);
+    printf("10. %s\n",mostrar.cuit);
+    printf("11. %d\n",mostrar.dueno);
 }
 void cargarArray(int tam ,eProducto listado[])
 {
@@ -141,10 +149,10 @@ void inicializarProductos(eProducto lista[])
     for(i = 0; i < 10 ;i++)
     {
         strcpy(lista[i].codigoDeBarra , codigoDeBarra[i]);
-        strcpy(lista[i].nombre, nombre);
-//        strcpy(lista[i].iDproveedor,provedor);
-        strcpy(lista[i].precio , precio);
-        strcpy(lista[i].fechaDeVecimiento,fechaDeVecimiento);
+        strcpy(lista[i].nombre, nombre[i]);
+        lista[i].iDproveedor = iDproveedor[i];
+        strcpy(lista[i].precio , precio[i]);
+        strcpy(lista[i].fechaDeVecimiento,fechaDeVecimiento[i]);
         lista[i].estado = OCUPADO;
     }
 }
@@ -164,31 +172,29 @@ void inicializarProvedor(eProvedor lista[])
     int cuit[3] = {4444 , 5555 , 6666} ;
     char dueno[3][50] = { "YPF", "axion" , " shell" };
     int i;
-    for(i = 0; i < 3 ;i++)
+    for(i = 0; i < 2 ;i++)
     {
-        strcpy(lista[i].descripcion , descripcion);
-        strcpy(lista[i].localidad,localidad);
-        strcpy(lista[i].dueno , dueno);
-        lista[i].id = id ;
-        lista[i].cuit = cuit;
+        strcpy(lista[i].descripcion , descripcion[i]);
+        strcpy(lista[i].localidad,localidad[i]);
+        strcpy(lista[i].dueno , dueno[i]);
+        lista[i].id = id [i];
+        lista[i].cuit = cuit[i];
     }
 }
-void mostrarTodo(eProvedor provedor[],eProducto producto[])
+void mostrarTodo(eProducto listaProductos[], int tamprod, eProvedor listaProvedores[],int tanprov)
 {
     int i;
     int j;
-    int k;
-    int indice ;
-    for(k = 0 ; k < 3 ; k++)
+    for(i=0; i<tamprod;i++)
     {
-       for(i = 0 ; i < 10 ; i = i + (3 + k))
+        mostrarArray(tamprod,listaProductos);
+        for(j=0;j<tanprov;j++)
         {
-            printf("\n%d\n",provedor[k].id);
-            printf("%s\n",provedor[k].descripcion);
-            printf("%s\n",provedor[k].localidad);
-            printf("%d\n",provedor[k].cuit);
-            printf("%s\n",provedor[k].dueno);
+            /*if(listaProductos[i].iDproveedor == listaProvedores[j].id)
+            mostraProvedor(listaProvedores[j]);*/
+
         }
+
     }
 }
 

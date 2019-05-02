@@ -32,6 +32,7 @@ int editarProducto(int ,eProducto[]);
 void cargarEnCero(eProducto[] , int);
 void inicializarProductos(eProducto lista[]);
 void inicializarProvedor(eProvedor lista[]);
-void mostrarTodo(eProvedor[],eProducto[]);
+void mostrarTodo(eProducto listaProductos[], int tamprod, eProvedor listaProvedores[],int tanprov);
+void mostraProvedor(eProvedor mostrar);
 #include "sopelan.c"
 #endif // SOPELAN_H_INCLUDED
