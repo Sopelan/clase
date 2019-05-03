@@ -34,5 +34,6 @@ void inicializarProductos(eProducto lista[]);
 void inicializarProvedor(eProvedor lista[]);
 void mostrarTodo(eProducto listaProductos[], int tamprod, eProvedor listaProvedores[],int tanprov);
 void mostraProvedor(eProvedor mostrar);
+void mostrarArrayProvedor(int tam,eProvedor listado[]);
 #include "sopelan.c"
 #endif // SOPELAN_H_INCLUDED

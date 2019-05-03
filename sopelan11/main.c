@@ -7,9 +7,10 @@ int main()
 {
     int opcion;
     eProducto producto[10];
-    eProvedor provedor[10];
+    eProvedor provedor[3];
     inicializarProductos(producto);
     inicializarProvedor(provedor);
+
     mostrarTodo( producto,  10 ,  provedor, 3);
     //producto = pedirProducto();
     //mostraProducto(producto);
