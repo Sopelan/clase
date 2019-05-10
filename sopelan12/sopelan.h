@@ -36,6 +36,6 @@ void mostrarTodo(eProducto listaProductos[], int tamprod, eProvedor listaProvedo
 void mostraProvedor(eProvedor mostrar);
 void mostrarArrayProvedor(int tam,eProvedor listado[]);
 int insertProveedor(int tam,eProvedor listado[],eProducto lista[]);
-eProvedor buscarprovedor();
+int buscarprovedor(eProvedor lista[] , int len , int id);
 #include "sopelan.c"
 #endif // SOPELAN_H_INCLUDED

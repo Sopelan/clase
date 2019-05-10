@@ -80,9 +80,17 @@ int insertProducto(int tam,eProducto listado[],eProvedor lista[])
     if(indice != OCUPADO)
     {
         listado[indice] = pedirProducto();
-        printf("1. YPF\n2. axion\n3. shell");
+        printf("1. YPF\n2. axion\n3. shell\n");
         scanf("%d",&opcion);
-        lista[opcion] = buscarprovedor();
+        if(!buscarprovedor(lista, tam , opcion))
+        {
+            printf("no existe ese proveedor\n");
+            listado[indice].estado = LIBRE;
+            return 0;
+        }
+        listado[indice].iDproveedor = opcion;
+
+
     }
     return indice;
 }
@@ -189,21 +197,21 @@ void inicializarProductos(eProducto lista[])
         lista[i].estado = OCUPADO;
     }
 }
-eProvedor buscarprovedor()
+int buscarprovedor(eProvedor lista[] , int len , int id)
 {
-        int i;
-        eProvedor lista[i];
-        int id[3] = {1 , 2 , 3};
-        char descripcion[3][50] = {"petrolera" ,"petrolera" , "petrolera"};
-        char localidad[3][50] = {"avellaneda" , "bahia blanca" , "rio negro"};
-        int cuit[3] = {4444 , 5555 , 6666} ;
-        char dueno[3][50] = { "YPF", "axion" , " shell" };
-        strcpy(lista[i].descripcion , descripcion[i]);
-        strcpy(lista[i].localidad,localidad[i]);
-        strcpy(lista[i].dueno , dueno[i]);
-        lista[i].id = id[i];
-        lista[i].cuit = cuit[i];
-        return lista[i];
+    int i;
+    int index = OCUPADO;
+
+    for(i = 0 ; i<len ; i++)
+    {
+        if(lista[i].id == id)
+        {
+            return 1;
+        }
+
+    }
+    return 0;
+
 
 }
 void construirArray(int tam , eProducto listado[])

@@ -22,7 +22,7 @@ int main()
     inicializarProductos(producto);
     inicializarProvedor(provedor);
     do{
-            printf("1.ALTA\n2.BAJA\n3.MODIFICACION\n4.MOSTRAR\n5.SALIR ");
+            printf("1.ALTA\n2.BAJA\n3.MODIFICACION\n4.MOSTRAR\n5.SALIR\n");
             scanf("%d",&opcion);
             switch(opcion)
             {
