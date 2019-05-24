@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1558710347 source:c:\users\alumno\desktop\clase\sopelan18 2\empleado.c
+	"empleado.h"
+
+1558710430 source:c:\users\alumno\desktop\clase\sopelan18 2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"empleado.h"
+
+1558710330 c:\users\alumno\desktop\clase\sopelan18 2\empleado.h
+	<stdio.h>
+	<stdlib.h>
+
+1558709105 c:\users\alumno\desktop\clase\sopelan18 2\empleado.c
+	"empleado.h"
+
