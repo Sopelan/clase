@@ -44,3 +44,7 @@ int getLegajo(eEmpleado* pEmpleado )
         retornoLegajo = pEmpleado->legajo;
     return retornoLegajo;
 }
+void destructorEmpleado(eEmpleado* pEmpleado)
+{
+    free(pEmpleado);
+}

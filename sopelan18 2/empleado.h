@@ -12,3 +12,4 @@ eEmpleado* nuevoEmpleadoParametrio(int legajo, char* nombre , float sueldo);
 int mostrarEmpleado(eEmpleado*);
 int setLegajo(eEmpleado* , int );
 int getLegajo(eEmpleado* );
+void destructorEmpleado(eEmpleado* pEmpleado);
