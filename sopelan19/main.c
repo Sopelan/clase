@@ -8,11 +8,11 @@ int main()
 {
     FILE *pArchivo;
     eAlumno alumno;
-    char texto[] = "lalala;555;10";
+    char texto[] = "lalala;555;10\n";
     strcpy(alumno.nombre ,"marcos");
     printf("%p\n",&pArchivo);
 
-    if( (pArchivo = fopen(ARCHIVO,"w")) == NULL)
+    if( (pArchivo = fopen(ARCHIVO,"a")) == NULL)
     {
         printf("el archivo no puede ser abierto\n");
         exit(1);
